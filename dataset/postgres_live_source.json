@@ -5,12 +5,20 @@
 			"referenceName": "postgres_aws_live",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"table_name": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "PostgreSqlTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "public",
-			"table": "employee"
+			"table": {
+				"value": "@dataset().table_name",
+				"type": "Expression"
+			}
 		}
 	}
 }
