@@ -1,0 +1,15 @@
+{
+	"name": "json_placeholder_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "json_placeholder_live",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "/posts"
+		},
+		"schema": []
+	}
+}
