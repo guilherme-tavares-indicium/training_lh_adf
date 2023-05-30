@@ -1,0 +1,22 @@
+{
+	"name": "dataset_blob_live",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blob_live",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "postgres",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
