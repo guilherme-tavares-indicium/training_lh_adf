@@ -1,0 +1,16 @@
+{
+	"name": "postgres_live_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "postgres_aws_live",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "PostgreSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "public",
+			"table": "employee"
+		}
+	}
+}
