@@ -1,0 +1,106 @@
+{
+	"name": "db_pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.table_list",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Copy data1",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "PostgreSqlSource",
+									"additionalColumns": [
+										{
+											"name": "ExtractedAt",
+											"value": {
+												"value": "@utcnow()",
+												"type": "Expression"
+											}
+										}
+									]
+								},
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobStorageWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".csv"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
+							},
+							"inputs": [
+								{
+									"referenceName": "PostgreSql_source",
+									"type": "DatasetReference",
+									"parameters": {
+										"tablename": {
+											"value": "@item()",
+											"type": "Expression"
+										},
+										"dbname": "apps_db_lighthouse_training"
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "blobstorage_csv_target",
+									"type": "DatasetReference",
+									"parameters": {
+										"filename": {
+											"value": "@{item()}_@{formatdatetime(utcnow(), 'yyyy-mm-dd')}}",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"table_list": {
+				"type": "array",
+				"defaultValue": [
+					"employee",
+					"products",
+					"events"
+				]
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-05-29T21:26:17Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

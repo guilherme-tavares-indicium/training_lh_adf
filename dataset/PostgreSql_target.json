@@ -1,0 +1,17 @@
+{
+	"name": "PostgreSql_target",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "azure_postgres_lh_target",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzurePostgreSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "public",
+			"table": "issues"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

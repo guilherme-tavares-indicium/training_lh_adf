@@ -1,0 +1,9 @@
+{
+	"name": "indiciumlighthouseadf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "9c58feee-4913-447f-a141-ab95baba854b",
+		"tenantId": "40efe5ba-ccb1-47ee-8ed5-9e9dce942cbf"
+	}
+}

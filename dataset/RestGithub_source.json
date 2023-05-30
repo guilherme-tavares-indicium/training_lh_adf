@@ -1,0 +1,16 @@
+{
+	"name": "RestGithub_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestService2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "/repos/octocat/Spoon-Knife/issues"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

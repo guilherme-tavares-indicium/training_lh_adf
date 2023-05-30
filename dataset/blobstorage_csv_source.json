@@ -1,0 +1,125 @@
+{
+	"name": "blobstorage_csv_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "github",
+				"container": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "url",
+				"type": "String"
+			},
+			{
+				"name": "repository_url",
+				"type": "String"
+			},
+			{
+				"name": "labels_url",
+				"type": "String"
+			},
+			{
+				"name": "comments_url",
+				"type": "String"
+			},
+			{
+				"name": "events_url",
+				"type": "String"
+			},
+			{
+				"name": "html_url",
+				"type": "String"
+			},
+			{
+				"name": "id",
+				"type": "String"
+			},
+			{
+				"name": "node_id",
+				"type": "String"
+			},
+			{
+				"name": "number",
+				"type": "String"
+			},
+			{
+				"name": "title",
+				"type": "String"
+			},
+			{
+				"name": "state",
+				"type": "String"
+			},
+			{
+				"name": "locked",
+				"type": "String"
+			},
+			{
+				"name": "assignee",
+				"type": "String"
+			},
+			{
+				"name": "milestone",
+				"type": "String"
+			},
+			{
+				"name": "comments",
+				"type": "String"
+			},
+			{
+				"name": "created_at",
+				"type": "String"
+			},
+			{
+				"name": "updated_at",
+				"type": "String"
+			},
+			{
+				"name": "closed_at",
+				"type": "String"
+			},
+			{
+				"name": "author_association",
+				"type": "String"
+			},
+			{
+				"name": "active_lock_reason",
+				"type": "String"
+			},
+			{
+				"name": "draft",
+				"type": "String"
+			},
+			{
+				"name": "body",
+				"type": "String"
+			},
+			{
+				"name": "timeline_url",
+				"type": "String"
+			},
+			{
+				"name": "performed_via_github_app",
+				"type": "String"
+			},
+			{
+				"name": "state_reason",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
