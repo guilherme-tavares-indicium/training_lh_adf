@@ -1,0 +1,9 @@
+{
+	"name": "dev-gt-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "111187fc-04f8-49b3-9fce-24566c57c44f",
+		"tenantId": "40efe5ba-ccb1-47ee-8ed5-9e9dce942cbf"
+	}
+}
