@@ -13,7 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "employee",
+				"fileName": "issues.json",
 				"folderPath": "target",
 				"container": "input"
 			}
