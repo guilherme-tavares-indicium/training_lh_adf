@@ -117,7 +117,7 @@
 						"referenceName": "live_postgres_dataset",
 						"type": "DatasetReference",
 						"parameters": {
-							"table_name": "issues"
+							"table_name": "issuess"
 						}
 					}
 				]
