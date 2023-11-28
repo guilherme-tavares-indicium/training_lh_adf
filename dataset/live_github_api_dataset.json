@@ -1,0 +1,18 @@
+{
+	"name": "live_github_api_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "github_api_live",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "live_datasets"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "/repos/octocat/Spoon-Knife/issues?per_page=1000"
+		},
+		"schema": []
+	}
+}

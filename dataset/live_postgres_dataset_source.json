@@ -1,0 +1,19 @@
+{
+	"name": "live_postgres_dataset_source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "postgres_aws_live",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "live_datasets"
+		},
+		"annotations": [],
+		"type": "PostgreSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "public",
+			"table": "employee"
+		}
+	}
+}
