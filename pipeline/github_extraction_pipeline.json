@@ -43,7 +43,10 @@
 				"inputs": [
 					{
 						"referenceName": "RestGithub_source",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"per_page": "5"
+						}
 					}
 				],
 				"outputs": [
