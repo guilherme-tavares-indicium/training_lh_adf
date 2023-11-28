@@ -1,0 +1,24 @@
+{
+	"name": "live_blob_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "live_demo_blob_connection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "employees.csv",
+				"folderPath": "postgres_extraction",
+				"container": "datalake"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

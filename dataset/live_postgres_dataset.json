@@ -1,0 +1,16 @@
+{
+	"name": "live_postgres_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "live_postgres_connection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzurePostgreSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "public",
+			"table": "employee"
+		}
+	}
+}
