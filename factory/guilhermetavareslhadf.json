@@ -1,0 +1,9 @@
+{
+	"name": "guilhermetavareslhadf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b2c57293-4ebb-4cac-96ab-ed7ac3a0407e",
+		"tenantId": "40efe5ba-ccb1-47ee-8ed5-9e9dce942cbf"
+	}
+}
