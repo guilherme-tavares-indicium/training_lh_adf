@@ -13,8 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "issues.json",
-				"folderPath": "github",
+				"folderPath": "target",
 				"container": "input"
 			}
 		},
