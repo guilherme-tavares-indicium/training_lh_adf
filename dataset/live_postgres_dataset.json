@@ -5,12 +5,20 @@
 			"referenceName": "live_postgres_connection",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"table_name": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzurePostgreSqlTable",
 		"schema": [],
 		"typeProperties": {
 			"schema": "public",
-			"table": "employee"
+			"table": {
+				"value": "@dataset().table_name",
+				"type": "Expression"
+			}
 		}
 	}
 }
