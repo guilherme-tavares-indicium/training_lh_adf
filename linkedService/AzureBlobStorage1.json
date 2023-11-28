@@ -5,12 +5,8 @@
 		"annotations": [],
 		"type": "AzureBlobStorage",
 		"typeProperties": {
-			"serviceEndpoint": "https://storagedevgt.blob.core.windows.net/",
-			"tenant": "40efe5ba-ccb1-47ee-8ed5-9e9dce942cbf",
-			"servicePrincipalId": "7c5cec78-beb4-45d0-90fc-3ff5cd069654",
-			"servicePrincipalCredentialType": "ServicePrincipalKey",
-			"accountKind": "StorageV2",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDJBMkNEMTRCLUIyQkUtNEZDMS1BNUFELTA0RjgxQzI1MDRCM184ZmVkNzY2NC03Mjg1LTQyOWMtOTNjMC1kMDMwMzhjZWFmMGEiDQp9"
+			"connectionString": "DefaultEndpointsProtocol=https;AccountName=devgtstorageaccount;EndpointSuffix=core.windows.net;",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDJBMkNEMTRCLUIyQkUtNEZDMS1BNUFELTA0RjgxQzI1MDRCM182NmZkMjg0Mi0yOGU2LTRhZjQtOWRjOS05MzMzOGMwYTE3MmUiDQp9"
 		}
 	}
 }
