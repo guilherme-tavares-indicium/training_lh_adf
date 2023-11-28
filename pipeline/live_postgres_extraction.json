@@ -43,7 +43,10 @@
 				"inputs": [
 					{
 						"referenceName": "live_postgres_dataset",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"table_name": "employees"
+						}
 					}
 				],
 				"outputs": [

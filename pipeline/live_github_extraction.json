@@ -53,6 +53,74 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "Load",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "extract",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzurePostgreSQLSink",
+						"writeBatchSize": 1000000,
+						"writeBatchTimeout": "00:30:00",
+						"preCopyScript": "truncate table public.issues",
+						"writeMethod": "CopyCommand"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "live_blob_dataset",
+						"type": "DatasetReference",
+						"parameters": {
+							"subfolder": "github_extractions",
+							"filename": "issues.csv"
+						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "live_postgres_dataset",
+						"type": "DatasetReference",
+						"parameters": {
+							"table_name": "issues"
+						}
+					}
+				]
 			}
 		],
 		"annotations": []
