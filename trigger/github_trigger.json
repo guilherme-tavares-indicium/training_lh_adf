@@ -8,6 +8,12 @@
 				"pipelineReference": {
 					"referenceName": "live_github_extraction",
 					"type": "PipelineReference"
+				},
+				"parameters": {
+					"table_name": [
+						"issues",
+						"outro"
+					]
 				}
 			}
 		],
