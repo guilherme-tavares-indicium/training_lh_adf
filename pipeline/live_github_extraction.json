@@ -49,7 +49,10 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"subfolder": "github_extractions",
-							"filename": "issues.csv"
+							"filename": {
+								"value": "@{pipeline().parameters.table_name}.csv",
+								"type": "Expression"
+							}
 						}
 					}
 				]
@@ -89,7 +92,10 @@
 						"type": "AzurePostgreSQLSink",
 						"writeBatchSize": 1000000,
 						"writeBatchTimeout": "00:30:00",
-						"preCopyScript": "truncate table public.issues",
+						"preCopyScript": {
+							"value": "truncate table public.@{pipeline().parameters.table_name}",
+							"type": "Expression"
+						},
 						"writeMethod": "CopyCommand"
 					},
 					"enableStaging": false,
@@ -117,12 +123,21 @@
 						"referenceName": "live_postgres_dataset",
 						"type": "DatasetReference",
 						"parameters": {
-							"table_name": "issuess"
+							"table_name": {
+								"value": "@pipeline().parameters.table_name",
+								"type": "Expression"
+							}
 						}
 					}
 				]
 			}
 		],
+		"parameters": {
+			"table_name": {
+				"type": "string",
+				"defaultValue": "issues"
+			}
+		},
 		"annotations": []
 	}
 }
