@@ -5,8 +5,8 @@
 		"annotations": [],
 		"type": "AzurePostgreSql",
 		"typeProperties": {
-			"connectionString": "host=lighthouse-db-indicium.postgres.database.azure.com;port=5432;database=postgres;uid=main_user@lighthouse-db-indicium;encryptionmethod=0",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDZBNjUyRDMzLTVEOUMtNDNDMC1CQUVDLUExMEIxREMwNTkwOF9lZWRkNWU0Zi0zODA3LTQzMDQtOWM3Zi05OTM5MjE3ZjdlNTAiDQp9"
+			"connectionString": "host=apps-db-lighthouse-training.ctdrgq7tvep2.us-east-1.rds.amazonaws.com;port=5432;database=apps_db_lighthouse_training;uid=main_user;encryptionmethod=0",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDJBMkNEMTRCLUIyQkUtNEZDMS1BNUFELTA0RjgxQzI1MDRCM182OTE5YTM5MS05ZDY4LTRmMmUtYjdmOS0xNDgyODA0Nzc5ODkiDQp9"
 		}
 	}
 }
