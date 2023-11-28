@@ -1,9 +1,9 @@
 {
-	"name": "live_postgres_extraction",
+	"name": "live_github_extraction",
 	"properties": {
 		"activities": [
 			{
-				"name": "extraction_employees",
+				"name": "extract",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -16,8 +16,13 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "AzurePostgreSqlSource",
-						"partitionOption": "None"
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
 					},
 					"sink": {
 						"type": "DelimitedTextSink",
@@ -30,19 +35,11 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false,
-					"translator": {
-						"type": "TabularTranslator",
-						"typeConversion": true,
-						"typeConversionSettings": {
-							"allowDataTruncation": true,
-							"treatBooleanAsNumber": false
-						}
-					}
+					"enableStaging": false
 				},
 				"inputs": [
 					{
-						"referenceName": "live_postgres_dataset",
+						"referenceName": "live_github_dataset",
 						"type": "DatasetReference"
 					}
 				],
@@ -51,8 +48,8 @@
 						"referenceName": "live_blob_dataset",
 						"type": "DatasetReference",
 						"parameters": {
-							"subfolder": "postgres_extraction",
-							"filename": "employees.csv"
+							"subfolder": "github_extractions",
+							"filename": "issues.csv"
 						}
 					}
 				]
