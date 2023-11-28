@@ -76,8 +76,8 @@
 						"storeSettings": {
 							"type": "AzureBlobStorageReadSettings",
 							"recursive": true,
-							"wildcardFolderPath": "github",
-							"wildcardFileName": "*",
+							"wildcardFolderPath": "target",
+							"wildcardFileName": "issues.json",
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
