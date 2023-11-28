@@ -1,0 +1,35 @@
+{
+	"name": "github_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "live_github_extraction",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Week",
+				"interval": 1,
+				"startTime": "2023-11-28T21:39:00Z",
+				"timeZone": "UTC",
+				"schedule": {
+					"minutes": [
+						25
+					],
+					"hours": [
+						4
+					],
+					"weekDays": [
+						"Saturday"
+					]
+				}
+			}
+		}
+	}
+}
