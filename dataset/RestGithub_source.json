@@ -5,10 +5,18 @@
 			"referenceName": "RestService2",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"per_page": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
-			"relativeUrl": "/repos/octocat/Spoon-Knife/issues"
+			"relativeUrl": {
+				"value": "/repos/octocat/Spoon-Knife/issues?per_page={@dataset().per_page}",
+				"type": "Expression"
+			}
 		},
 		"schema": []
 	},

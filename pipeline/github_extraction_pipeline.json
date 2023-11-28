@@ -22,6 +22,9 @@
 						"requestMethod": "GET",
 						"additionalHeaders": {
 							"User-Agent": "guilherme.tavares"
+						},
+						"paginationRules": {
+							"supportRFC5988": "true"
 						}
 					},
 					"sink": {
