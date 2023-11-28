@@ -2,11 +2,16 @@
 	"name": "live_postgres_connection",
 	"type": "Microsoft.DataFactory/factories/linkedservices",
 	"properties": {
+		"parameters": {
+			"database_name": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzurePostgreSql",
 		"typeProperties": {
-			"connectionString": "host=apps-db-lighthouse-training.ctdrgq7tvep2.us-east-1.rds.amazonaws.com;port=5432;database=apps_db_lighthouse_training;uid=main_user;encryptionmethod=0",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDJBMkNEMTRCLUIyQkUtNEZDMS1BNUFELTA0RjgxQzI1MDRCM19lZTY5NGZlNC0yZjYwLTRlZTQtOTQ4Yy1iNDRhM2ExZGIzNmUiDQp9"
+			"connectionString": "host=apps-db-lighthouse-training.ctdrgq7tvep2.us-east-1.rds.amazonaws.com;port=5432;database=@{linkedService().database_name};uid=main_user;encryptionmethod=0",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDJBMkNEMTRCLUIyQkUtNEZDMS1BNUFELTA0RjgxQzI1MDRCM19iM2FjNWYwOC03NDgzLTQ3YjctYTc1NC01OWYxOTdlZjEwYzIiDQp9"
 		}
 	}
 }
